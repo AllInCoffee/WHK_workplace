@@ -29,11 +29,12 @@ for i=1:s
     + (1+alpha_TPA.*E+gamma_FCA.*tao.*E.^2).^2 );
     fimplicit(g,[-30 30 0 100]);hold on
 end
+
 xlabel('\delta')
 ylabel('P')
 
 figure()
-P_range=1:10:100;
+P_range=1:20:200;
 t=size(P_range,2);
 for i=1:t
     P=P_range(i);
@@ -42,6 +43,7 @@ for i=1:t
     + (1+alpha_TPA.*E+gamma_FCA.*tao.*E.^2).^2 );
     fimplicit(h,[-40 40 0 1.5]);hold on
 end
+
 xlabel('\delta')
 ylabel('E')
 
